@@ -1,0 +1,83 @@
+@media (min-width: 768px) {
+    .title {
+        margin-top: 1rem;
+    }
+
+    .zombie__container,
+    .zombie__background {
+        width: 100vw;
+        height: 30rem;
+    }
+
+    .zombie__background {
+        width: 70vw;
+    }
+
+    .game__container {
+        height: 20rem;
+    }
+
+    .word__selected {
+        top: 5rem;
+        gap: 0.5rem;
+    }
+
+    .letters__try {
+        top: 8.5rem;
+    }
+
+    .finish__msg {
+        top: 7.5rem;
+    }
+
+    .word__title,
+    .word__list {
+        translate: -1rem -31rem;
+    }
+
+    .word__list {
+        height: 29rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .title {
+        margin-top: 1rem;
+    }
+
+    .zombie__container,
+    .zombie__background {
+        width: 100vw;
+        height: 30rem;
+    }
+
+    .zombie__background {
+        width: 70vw;
+    }
+
+    .game__container {
+        height: 20rem;
+    }
+
+    .word__selected {
+        top: 5rem;
+        gap: 0.5rem;
+    }
+
+    .letters__try {
+        top: 8.5rem;
+    }
+
+    .finish__msg {
+        top: 7.5rem;
+    }
+
+    .word__title,
+    .word__list {
+        translate: -1rem -31rem;
+    }
+
+    .word__list {
+        height: 29rem;
+    }
+}

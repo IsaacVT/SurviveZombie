@@ -1,0 +1,83 @@
+:root {
+    --font-fam: "Raleway";
+
+    --cor-bg-primary: #a8b7c9;
+    --cor-bg-secondary: #2c2c74;
+    --cor-bg-footer: #5555b3;
+    --cor-bg-change-screen: #85a3c7;
+    --cor-bg-finish-cartel: #7fffd4;
+
+    --cor-text-primary: #ffffff;
+    --cor-text-secondary: #2c2c74;
+    --cor-text-secret: #7fffd4;
+
+    --cor-btn-text-primary: #ffffff;
+    --cor-btn-text-secondary: #2c2c74;
+    --cor-btn-bg-primary: #58b394;
+    --cor-btn-bg-secondary: ;
+    --cor-btn-bg-disabled: #5e58b3;
+
+    /* Posición del zombie */
+    --head-position: translate(0rem, 1.2rem);
+    --arm-left-position: translate(2.3rem, 0.7rem);
+    --arm-right-position: translate(-2.4rem, 0.8rem);
+    --leg-position: translate(-4.5rem, 0rem);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-fam);
+    color: var(--cor-text-primary);
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    overflow-x: hidden;
+}
+
+h2 {
+    margin: 0;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+th,
+td {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--cor-background-secondary);
+}
+
+section {
+    display: flex;
+    box-sizing: border-box;
+    background-color: var(--cor-background-primary);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    width: 15rem;
+    height: 4rem;
+    background-color: var(--cor-btn-bg-primary);
+    color: var(--cor-btn-text-primary);
+    transition: color, background-color 0.2s ease-in-out;
+}
+
+button:disabled {
+    background-color: var(--cor-btn-bg-disabled);
+    color: var(--cor-text-secondary);
+    cursor: none;
+}

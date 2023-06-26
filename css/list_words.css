@@ -1,0 +1,70 @@
+.view__words {
+    display: none;
+    flex-direction: column;
+}
+
+.word__title,
+.word__list {
+    width: 100vw;
+    translate: -1rem -26rem;
+}
+
+.word__title {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    font-size: 1rem;
+    background-color: var(--cor-bg-secondary);
+    z-index: 20;
+}
+
+.word__list {
+    position: absolute;
+    height: 25rem;
+    background-color: #5e58b3;
+    overflow-y: auto;
+    z-index: 15;
+}
+
+.word__list table {
+    margin-top: 3rem;
+    text-align: center;
+    width: 100vw;
+    height: 25rem;
+    font-size: 1.5rem;
+}
+
+.word__list td {
+    border-bottom: 1px solid var(--cor-bg-primary);
+}
+
+.word__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.word__input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.word__input label {
+    text-align: center;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    height: 2rem;
+}
+
+.word__input input {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    height: 2rem;
+}

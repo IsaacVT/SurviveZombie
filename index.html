@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css\global.css">
+    <link rel="stylesheet" href="css\zombie.css">
+    <link rel="stylesheet" href="css\animations.css">
+    <link rel="stylesheet" href="css\game_style.css">
+    <link rel="stylesheet" href="css\list_words.css">
+    <link rel="stylesheet" href="css\responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="assets/icon.ico">
+    <title>Survive Zombie</title>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Titulo -->
+        <p class='title' id='title'>Survive zombie</p>
+        <!-- Pantalla de carga -->
+        <span class="change__screen" id="change__screen"></span>
+        <!-- Mensaje de fin de juego -->
+        <span class='finish__msg' id='finish__msg'></span>
+        <!-- Zombie -->
+        <section id="zombie__container">
+            <div class="zombie__container">
+                <img class="zombie__background" src="assets/decoracion/ambient.png" alt="background">
+
+                <div class="zombie" id="zombie">
+                    <img class="z_body" src="assets/zombie/body.png" alt="z_body">
+                    <img class="z_head" src="assets/zombie/head.png" alt="z_head">
+                    <img class="arm_left" src="assets/zombie/arm_left.png" alt="arm_left">
+                    <img class="arm_right" src="assets/zombie/arm_right.png" alt="arm_right">
+                    <img class="leg_right" src="assets/zombie/leg_right.png" alt="leg_right">
+                </div>
+            </div>
+        </section>
+        <section class="game__container">
+            <!-- Pantalla de inicio -->
+            <div class="game__instructions" id="game__before__start">
+                <div class="game__title">Desafía al zombie adivinando palabras y mantén sus extremidades intactas.
+                </div>
+                <div class="game__options">
+                    <button id="new__game">Juego nuevo</button>
+                    <button id="show_words">Palabras</button>
+                </div>
+            </div>
+            <!-- Bloque del juego -->
+            <div class="game__start__container" id="game__play">
+                <!-- Palabra secreta -->
+                <div class="word__selected" id="secret"></div>
+                <!-- Historial de letras ingresadas -->
+                <div class="letters__try" id="letters__try"></div>
+                <!-- Contador de vidas -->
+                <div class="lifes__container" id="lifes__container"></div>
+                <!-- Contenedor para los controles del juego -->
+                <div class="letter__input" id="letter__input">
+                    <input type="text" id="letter__secret" name="letter" autocomplete="off" />
+                    <button id="try__letter">Intentar</button>
+                </div>
+                <!-- Contador de letras restantes -->
+                <div class="secret__letters" id="secret__letters"></div>
+                <!-- Opciones de fin de juego -->
+                <div class="game__finish" id="game__finish">
+                    <button id="try__again">Reintentar</button>
+                    <button id="return__home">Salir</button>
+                </div>
+            </div>
+            <!-- Bloque para añadir y editar palabras -->
+            <div class="view__words" id="view__words">
+                <div class="word__title">
+                    <h2>Lista de palabras</h2>
+                </div>
+                <!-- Listado de palabras -->
+                <div class="word__list" id="word__list">
+
+                </div>
+                <!-- Opciones para agregar o cancelar -->
+                <div class="word__options" id="word__options">
+                    <div class="word__input">
+                        <label for="word__new">Nueva palabra</label>
+                        <input type="text" id="word__new" name="word__new" autocomplete="off" />
+                    </div>
+
+                    <button id="word__insert">Insertar</button>
+                    <button id="cancel__insert">Regresar</button>
+                </div>
+            </div>
+        </section>
+        <section class="footer">
+            <p>Desarrollado por Isaac Vega<br>2023</p>
+        </section>
+    </div>
+    <!-- Script del documento JavaScript -->
+    <script type='module' src="js\index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+/* Moviemiento del cielo */
+@keyframes move_sky {
+    0% {
+        transform: translateX(700px);
+    }
+    100% {
+        transform: translateX(-900px);
+    }
+}
+
+/* Zombie moviendose */
+@keyframes run_zombie {
+    0% {
+        transform: translateY(0.3rem) rotate(0deg);
+    }
+    50% {
+        transform: translateY(0.3rem) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0.3rem) rotate(0deg);
+    }
+}
+
+/* Zombie hacia atras */
+@keyframes zombie_error {
+    0% {
+        transform: translateY(0.5rem);
+    }
+    100% {
+        transform: rotate3d(1, 0, 0, 90deg);
+    }
+}
+
+/* Efectos de la cabeza */
+
+@keyframes move_head {
+    0% {
+        transform: var(--head-position) rotate(0deg);
+    }
+    50% {
+        transform: var(--head-position) rotate(10deg);
+    }
+    100% {
+        transform: var(--head-position) rotate(0deg);
+    }
+}
+
+@keyframes bye_head {
+    100% {
+        transform: translate(6.25rem, 13.4375rem) rotate(360deg);
+        opacity: 0%;
+    }
+}
+
+/* Efectos del Brazo izq  */
+
+@keyframes move_arm_left {
+    0% {
+        transform: var(--arm-left-position) rotate(0deg);
+    }
+    50% {
+        transform: var(--arm-left-position) rotate(2deg);
+    }
+    100% {
+        transform: var(--arm-left-position) rotate(0deg);
+    }
+}
+
+@keyframes bye_arm_left {
+    100% {
+        transform: translate(0rem, 9.375rem) rotate(40deg);
+        opacity: 0%;
+    }
+}
+
+/* Efectos del Brazo der  */
+
+@keyframes move_arm_right {
+    0% {
+        transform: var(--arm-right-position) rotate(-1deg);
+    }
+    50% {
+        transform: var(--arm-right-position) rotate(-5deg);
+    }
+    100% {
+        transform: var(--arm-right-position) rotate(-1deg);
+    }
+}
+
+@keyframes bye_arm_right {
+    100% {
+        transform: translate(0rem, 10rem) rotate(-50deg);
+        opacity: 0%;
+    }
+}
+
+/*  Efectos de la Pierna  */
+
+@keyframes move_leg_right {
+    0% {
+        transform: var(--leg-position) rotate(-1deg);
+    }
+    50% {
+        transform: var(--leg-position) rotate(-5deg);
+    }
+    100% {
+        transform: var(--leg-position) rotate(-1deg);
+    }
+}
+
+@keyframes bye_leg_right {
+    0% {
+        transform-origin: bottom right;
+        transform: var(--leg-position) rotate(0deg);
+    }
+    100% {
+        transform-origin: bottom right;
+        transform: translate(-4rem, 0rem) rotate(90deg);
+        opacity: 0%;
+    }
+}

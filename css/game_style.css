@@ -1,0 +1,236 @@
+/* Contenedor general */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    position: absolute;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 5rem;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 12rem;
+    z-index: 50;
+}
+
+.change__screen {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: var(--cor-bg-change-screen);
+    clip-path: circle(0% at 50% 50%);
+    transition: clip-path 1s ease;
+    background-image: url("../assets/zombie/head.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10rem;
+}
+
+.change__screen.active {
+    clip-path: circle(100% at 50% 50%);
+}
+
+/* Contenedor del zombie */
+.zombie__container,
+.zombie__background {
+    width: 100vw;
+    height: 25rem;
+}
+
+.zombie__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: var(--cor-bg-secondary);
+}
+
+.zombie__background {
+    position: absolute;
+    background-image: radial-gradient(
+        circle at bottom,
+        #7ff196 0%,
+        #78b28d 26%,
+        #618c87 57%,
+        #006d91 98%
+    );
+}
+
+/* Elementos del juego */
+.game__container {
+    flex-direction: column;
+    background-color: var(--cor-bg-secondary);
+    width: 100vw;
+    height: 25rem;
+    padding: 1rem;
+}
+
+.game__instructions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.game__title {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: auto 2.2rem;
+}
+
+.game__options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* GAME START */
+.game__start__container {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+}
+
+/* Life icon */
+.lifes__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.life {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    background-image: url("../assets/life_icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/* Secret word */
+.word__selected {
+    position: absolute;
+    top: 2.5rem;
+    align-self: center;
+    font-size: 1.8rem;
+    display: flex;
+    gap: 0.3rem;
+    max-width: 18rem;
+    z-index: 4;
+}
+
+.secret__letter,
+.shh {
+    width: 1.75rem;
+    height: 2.5rem;
+}
+
+.secret__letter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--cor-text-secret);
+    font-weight: bold;
+    color: var(--cor-text-primary);
+}
+
+.shh {
+    color: transparent;
+}
+
+.secret__letters {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--cor-bg-primary);
+}
+
+.letter__input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.letter__input input {
+    text-align: center;
+    font-size: 2rem;
+    width: 7rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.letter__input button {
+    width: 7.5rem;
+    height: 3.5rem;
+}
+
+.letters__try {
+    position: absolute;
+    top: 6rem;
+    align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-text-secret);
+    z-index: 5;
+}
+
+/* GAME FINISH */
+.game__finish {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.game__finish button {
+    height: 5rem;
+}
+
+/* CARTEL OF FINISH GAME */
+.finish__msg {
+    position: absolute;
+    top: 5rem;
+    width: 20rem;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    line-height: 5rem;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: var(--cor-bg-finish-cartel);
+    color: var(--cor-text-secondary);
+    clip-path: inset(0 0 100% 0);
+    transition: clip-path 0.5s ease;
+    z-index: 10;
+}
+
+.finish__msg.active {
+    clip-path: inset(0 0 0 0);
+}
+
+/* Footer */
+.footer {
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    width: 100vw;
+    padding: 0.95rem;
+    background-color: var(--cor-bg-footer);
+}
+
+.footer p {
+    margin: 0;
+}
